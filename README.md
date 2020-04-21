@@ -1,3 +1,3 @@
 # BasicSpringBootWebKotlin
 
-Spring boot web starter + Kotlin + Log4j2
+Kotlin example Spring Boot web application
