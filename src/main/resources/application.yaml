@@ -1,0 +1,16 @@
+server:
+  # this is the default value
+  port: 8080
+  servlet:
+    context-path: '/Basic'
+spring:
+  datasource:
+    url: jdbc:h2:mem:maindb
+    driver-class-name: org.h2.Driver
+    username: dba
+    password: password
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      # automatically create tables based on entity models
+      ddl-auto: update
