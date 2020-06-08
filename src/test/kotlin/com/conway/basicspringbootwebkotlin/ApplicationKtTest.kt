@@ -10,10 +10,10 @@ import org.springframework.boot.test.context.SpringBootTest
 @SpringBootTest
 internal class ApplicationKtTest {
 
-    private val logger = LoggerFactory.getLogger(ApplicationKtTest::class.java)
+  private val logger = LoggerFactory.getLogger(ApplicationKtTest::class.java)
 
-    @Test
-    fun contextLoads() {
-        logger.info("run")
-    }
+  @Test
+  fun contextLoads() {
+    logger.info("run")
+  }
 }

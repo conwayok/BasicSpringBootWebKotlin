@@ -1,6 +1,6 @@
 package com.conway.basicspringbootwebkotlin.controller
 
-import com.conway.basicspringbootwebkotlin.model.view.AlohaViewModel
+import com.conway.basicspringbootwebkotlin.dto.ExampleRequest
 import com.conway.basicspringbootwebkotlin.util.ProjectUtils
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Test
@@ -21,20 +21,20 @@ import org.springframework.test.web.servlet.request.MockMvcRequestBuilders
 @AutoConfigureMockMvc
 internal class HelloControllerTest {
 
-    @Autowired
-    private lateinit var mockMvc: MockMvc
+  @Autowired
+  private lateinit var mockMvc: MockMvc
 
-    private val logger = LoggerFactory.getLogger(HelloControllerTest::class.java)
+  private val logger = LoggerFactory.getLogger(HelloControllerTest::class.java)
 
-    @Test
-    fun hello2() {
-        val alohaViewModel = AlohaViewModel("aloha", "world")
-        val response = mockMvc.perform(
-            MockMvcRequestBuilders.post("/Hello/Hello2")
-                .content(ProjectUtils.OBJECT_MAPPER.writeValueAsString(alohaViewModel))
-                .contentType(MediaType.APPLICATION_JSON_VALUE)
-        ).andReturn().response
-        logger.info(response.contentAsString)
-        Assertions.assertEquals(200, response.status)
-    }
+  @Test
+  fun hello2() {
+    val alohaViewModel = ExampleRequest("aloha", "world")
+    val response = mockMvc.perform(
+      MockMvcRequestBuilders.post("/Hello/Hello2")
+        .content(ProjectUtils.OBJECT_MAPPER.writeValueAsString(alohaViewModel))
+        .contentType(MediaType.APPLICATION_JSON_VALUE)
+    ).andReturn().response
+    logger.info(response.contentAsString)
+    Assertions.assertEquals(200, response.status)
+  }
 }

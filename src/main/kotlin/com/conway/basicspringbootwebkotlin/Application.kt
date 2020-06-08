@@ -4,8 +4,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
 
 /** Created by Conway */
-@SpringBootApplication
-open class Application
+@SpringBootApplication class Application
+
 fun main(args: Array<String>) {
-    runApplication<Application>(*args)
+  runApplication<Application>(*args)
 }

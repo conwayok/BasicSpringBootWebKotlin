@@ -3,14 +3,24 @@ server:
   port: 8080
   servlet:
     context-path: '/Basic'
+  # use for debugging purposes
+  error:
+    include-exception: true
+    include-stacktrace: never
 spring:
   datasource:
-    url: jdbc:h2:mem:maindb
-    driver-class-name: org.h2.Driver
-    username: dba
-    password: password
+    url: jdbc:mysql://localhost:3306/Example?useSSL=false&useUnicode=true&characterEncoding=UTF-8
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: admin
+    password: conwaydb
   jpa:
-    database-platform: org.hibernate.dialect.H2Dialect
+    database-platform: org.hibernate.dialect.MySQL57Dialect
     hibernate:
       # automatically create tables based on entity models
       ddl-auto: update
+      # custom names
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+    show-sql: false
+    generate-ddl: true
+debug: false

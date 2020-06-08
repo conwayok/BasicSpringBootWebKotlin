@@ -4,7 +4,7 @@ import com.fasterxml.jackson.module.kotlin.jacksonObjectMapper
 
 /** Created by Conway */
 class ProjectUtils {
-    companion object {
-        val OBJECT_MAPPER = jacksonObjectMapper()
-    }
+  companion object {
+    val OBJECT_MAPPER = jacksonObjectMapper()
+  }
 }
