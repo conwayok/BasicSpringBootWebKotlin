@@ -24,6 +24,9 @@ internal class HelloDaoTest {
     val helloModel = HelloModel(col1 = "asdf", col2 = "qwer")
     val result = helloDao.save(helloModel)
     Assertions.assertNotNull(result)
+    Assertions.assertNotNull(result.id)
+    val fetchedOptional = helloDao.findById(result.id!!)
+    Assertions.assertTrue(fetchedOptional.isPresent)
   }
 
   @Test

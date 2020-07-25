@@ -51,6 +51,8 @@ dependencies {
     // junit 5
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.5.2'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.5.2'
+
+    testImplementation 'com.h2database:h2:1.4.200'
 }
 
 compileKotlin {

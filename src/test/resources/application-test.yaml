@@ -2,3 +2,10 @@ spring:
   main:
     # load all beans lazily
     lazy-initialization: true
+    # h2 database for testing
+  datasource:
+    driver-class-name: org.h2.Driver
+    username: sa
+    password: sa
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
