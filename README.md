@@ -2,10 +2,14 @@
 
 Spring Boot example web application containing:
 
-1. Kotlin
-2. Spring Boot 2.2.1
-3. MySQL connection
-4. log4j2 + slf4j
-5. Junit 5
-6. Springdoc Openapi
-7. Fasterxml Jackson
+- Kotlin
+- Spring Boot 2.2.1
+- MySQL connection
+- log4j2 + slf4j
+- Junit 5
+- Springdoc Openapi
+- Fasterxml Jackson
+- Mockk 
+
+To run, configure a database in resources/application.yaml and execute `./gradlew bootRun`
+
