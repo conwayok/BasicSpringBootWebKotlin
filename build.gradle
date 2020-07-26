@@ -52,7 +52,11 @@ dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.5.2'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.5.2'
 
+    // embedded h2 database
     testImplementation 'com.h2database:h2:1.4.200'
+
+    // kotlin mock framework
+    testImplementation "io.mockk:mockk:1.10.0"
 }
 
 compileKotlin {
